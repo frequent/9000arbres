@@ -85,7 +85,15 @@
 .fa-twitch:before {
     content: "\f1e8";
 }
-
+.fa-whatsapp:before {
+  content: "\f232"; 
+}
+.fa-square-envelope::before {
+  content: "\f199"; 
+}
+.fa-envelope-square::before {
+  content: "\f199";
+}
 
 html,
 body {
@@ -127,7 +135,13 @@ img, video {
   max-width: 100%;
 }
 
+
+
 /** ******************* Container Layout ******************* **/
+div[data-gadget-url$="gadget_10000arbres_style.html"] {
+  height: 100vh;
+  overflow: hidden;
+}
 div[data-gadget-url$="gadget_10000arbres_style.html"] header > div {
   max-width: 1150px;
   margin: 0 auto;
@@ -136,135 +150,213 @@ div[data-gadget-url$="gadget_10000arbres_style.html"] header > div {
   padding-right: 15px;
   z-index: 20;
 }
-div[data-gadget-url$="gadget_10000arbres_style.html"] main {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 1150px;
+div[data-gadget-url$="gadget_10000arbres_style.html"] header .image-banner-logo svg {
+  width: 8em;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  height: auto;
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .sec-layout-highlight {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .image-banner,
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner {
+  flex: 0 0 50%;
+  max-width: 50%;  
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner {
+  height: 102vh;
+  padding-right: 40px;
+  padding-left: 40px;
+  overflow: scroll;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] figure {
+  margin: 0;
+  padding: 0;
 }
 @media screen and (max-width:44em) {
-  div[data-gadget-url$="gadget_10000arbres_style.html"] main {
+  div[data-gadget-url$="gadget_10000arbres_style.html"] header .image-banner-logo svg {
+    width: 6em;
+  }
+  div[data-gadget-url$="gadget_10000arbres_style.html"] {
+    height: unset;
+    overflow: initial;
+  }
+  div[data-gadget-url$="gadget_10000arbres_style.html"] main .sec-layout-highlight {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  div[data-gadget-url$="gadget_10000arbres_style.html"] main .image-banner,
+  div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner {
+    display: block;
     width: 100%;
-    padding-left: 1em;
-    padding-right: 1em;
+    margin: 0;
+    padding: 0;
+    max-width: unset;
+    flex: none;
+    overflow: initial;
+    height: auto;
+  }
+  div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner {
+    padding: 0 5%;
     box-sizing: border-box;
-    overflow: hidden;
   }
 }
 
-
-/** ******************* Footer Style ******************* **/
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section h2,
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section h3 {
-  font-weight: 400;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > h2 {
-  background-color: rgb(249 243 255);
-  padding: 1em 4em 0;
-  margin: 2em 0 0 0;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section h3 {
-  color: #ffffff;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section ul {
-  width: 100%;
-  margin: 0;
+/** ******************* Content Layout ******************* **/
+div[data-gadget-url$="gadget_10000arbres_style.html"] #socialmedia {
+  text-align: center;
+  margin-top: -5em;
   display: flex;
-  padding: 0;
 }
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section ul li {
-  list-style: none;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > ul {
-  background-color: rgb(249 243 255);
-  padding: 2em 5em 3em;
-  align-items: top;
-  justify-content: center;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > ul li {
+div[data-gadget-url$="gadget_10000arbres_style.html"] #socialmedia p {
+  color: #ffffff;
+  width: 42%;
   padding: 1em;
+  vertical-align: top;
+  font-size: .9em;
+  line-height: 1em;
+  padding-left: 3em;
 }
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > ul li a {
-  background-color: #502379;
+div[data-gadget-url$="gadget_10000arbres_style.html"] #socialmedia ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 55%;
+  margin-top: 1em;
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] #socialmedia ul li {
+  flex: 1;
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] #socialmedia ul li svg {
+  width: 1.25em;
+  vertical-align: top;
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] #socialmedia ul li a {
   color: #ffffff;
-  padding: .75em 1em;
-  font-weight: bold;
-  text-decoration: none;
+  font-size: 1.5em;
+  padding: .5em;
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] #socialmedia ul li a:hover,
+div[data-gadget-url$="gadget_10000arbres_style.html"] #socialmedia ul li svg:hover {
+  color: #EEE1B3;
+}
+@media screen and (max-width:44em) {
+  div[data-gadget-url$="gadget_10000arbres_style.html"] #socialmedia {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: block;
+  }
+  div[data-gadget-url$="gadget_10000arbres_style.html"] #socialmedia p,
+  div[data-gadget-url$="gadget_10000arbres_style.html"] #socialmedia ul {
+    width: 100%;
+  }
+  div[data-gadget-url$="gadget_10000arbres_style.html"] #socialmedia p {
+    margin-bottom: 1em;
+    padding: 0;
+  }
+}
+
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner h2:first-child {
+  padding-top: 2em;
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner h1,
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner h2,
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner h3,
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner p,
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner a {
+  color: #ffffff;
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner h1 {
+  font-size: 3em;
+  line-height: .9em;
+  letter-spacing: -1px;
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner p {
+  line-height: 1.15em;
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner form {
+  display: block;
+  background-color: #cdb0e8;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner form h3,
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner form p,
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner form label,
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner form input,
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner form span {
+  color: #502379;  
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner form p {
+  margin-bottom: .5em;
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner form span {
+  font-style: italic;
+  font-size: .9em;
+  padding-left: 1em;
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner form input {
+  font-family: 'Ubuntu';
+  font-size: 1.1em;
+  padding: .25em;
+  margin: .5em;
+  border: 1px solid #502379;
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner form label {
   font-size: 1.25em;
-  box-shadow: 5px 5px #1BBE6F;
 }
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > ul li a:hover {
-  background-color: #1BBE6F;
-  box-shadow: 5px 5px #502379;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div {
-  background-color: #502379;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div > ul:first-of-type {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div > ul:first-of-type > li {
-  margin-top: 6em;
-  margin-bottom: 6em;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div ul:first-of-type li h3 {
-  font-size: 2em;
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner form button {
+  background-color: #1BBE8C;
   color: #ffffff;
+  font-family: 'Ubuntu';
   font-weight: bold;
+  font-size: 1.25em;
+  border: 0 none;
+  padding: .25em .5em;
+  margin-top: .25em;
+  box-shadow: 5px 5px #ffffff;
+  pointer: cursor;
 }
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div ul:first-of-type li h3 + ul {
-  width: 80%;
-  margin: 0 auto;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div ul:first-of-type li h3 + ul li a {
-  color: #ffffff;
-  font-size: 2em;
-  width: 1.5em;
-  height: 1.5em;
-  display: inline-block;
-  text-align: center;
-  padding-top: 0.15em;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div ul:first-of-type li h3 + ul li a:hover {
+div[data-gadget-url$="gadget_10000arbres_style.html"] main .content-banner form button:hover {
   background-color: #ffffff;
   color: #502379;
+  box-shadow: 5px 5px #1BBE6F;
 }
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div p { 
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div > ul:last-of-type {
-  background: #502379;
-  padding: 3em 8em 3em;
+
+/** ******************* Footer Style ******************* **/
+div[data-gadget-url$="gadget_10000arbres_style.html"] footer ul {
   text-align: center;
   align-items: flex-start;
   justify-content: center;
 }
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div > ul:last-of-type ul {
+div[data-gadget-url$="gadget_10000arbres_style.html"] footer ul {
   display: block;
   padding-left: 1em;
 }
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div > ul:last-of-type ul li {
+div[data-gadget-url$="gadget_10000arbres_style.html"] footer ul li {
   display: block;
   text-align: left;
 }
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div > ul:last-of-type ul li h3 {
+div[data-gadget-url$="gadget_10000arbres_style.html"] footer ul li h3 {
   margin-bottom: .5em;
 }
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div > ul:last-of-type ul li a {
+div[data-gadget-url$="gadget_10000arbres_style.html"] footer ul li a {
   text-decoration: none;
   color: #ffffff;
 }
 div[data-gadget-url$="gadget_10000arbres_style.html"] footer svg {
-  width: 13em;
+  width: 4em;
   height: auto;
 }
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div > ul:last-of-type h3 + a {
+div[data-gadget-url$="gadget_10000arbres_style.html"] footer ul h3 + a {
   color: #ffffff;
   padding: 0.75em 1em;
   text-decoration: none;
@@ -272,279 +364,44 @@ div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div > ul:
   font-size: 1.25em;
   font-weight: bold;
 }
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div > ul:last-of-type h3 + a:hover {
+div[data-gadget-url$="gadget_10000arbres_style.html"] footer ul h3 + a:hover {
   background: #606161;
   color: #ffffff;
 }
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div p {
+div[data-gadget-url$="gadget_10000arbres_style.html"] footer p {
   padding: 1em;
   text-align: justify;
 }
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div ul ~ p {
+div[data-gadget-url$="gadget_10000arbres_style.html"] main footer > p:last-of-type {
   background-image: url(img/FR-Graphic-hero-background-rainbow.webp);
   text-align: center;
+  margin: 0em -40px;
 }
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div p a {
+div[data-gadget-url$="gadget_10000arbres_style.html"] main footer ul + p a {
   color: #ffffff;  
 }
-div[data-gadget-url$="gadget_10000arbres_style.html"] .footer-content {
-  text-align: center;
-}
+
 @media only screen and (max-width: 44em) {
-  div[data-gadget-url$="gadget_10000arbres_style.html"] footer section ul {
+  div[data-gadget-url$="gadget_10000arbres_style.html"] footer ul {
     width: 100%;
     display: block;
-  }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > ul {
     padding-left: 1em;
     padding-right: 1em;
   }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > h2 {
+  div[data-gadget-url$="gadget_10000arbres_style.html"] footer h2 {
     padding: 1em 1em 0;
   }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > ul li {
+  div[data-gadget-url$="gadget_10000arbres_style.html"] footer ul li {
     display: block;
     margin-bottom: 2em;
   }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div > ul:first-of-type > li {
-    margin: 2em 0;
-  }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > ul li a {
+  div[data-gadget-url$="gadget_10000arbres_style.html"] footer ul li a {
     display: block;
     width: 100%;
     text-align: center;
   }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div > ul:last-of-type ul li {
-    text-align: left;
-    margin: 0;
-  }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div > ul:last-of-type {
-    padding: 3em;
-  }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] footer section > div p {
-    text-align: center;
-  }
 }
 
-/** ******************* Content Style ******************* **/
-div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight h1 {
-  font-family: 'Ubuntu';
-  font-size: 4em;
-  color: #ffffff;
-  text-align: center;
-  margin-top: 1.5em;
-  letter-spacing: -2px;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight h1 + h2 {
-  font-family: 'Ubuntu';
-  text-align: center;
-  font-size: 2em;
-  letter-spacing: -1px;
-  color: #ffffff;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight p {
-  line-height: 21px;
-  color: #ffffff;
-  text-align: justify;
-  font-size: 20px;
-  max-width: 44em;
-  margin-left: auto;
-  margin-right: auto;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight figure {
-  margin: 0 0 2em 0;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight figure img {
-  width: 64%;
-  display: block;
-  margin: 0 auto;
-  max-width: 44em;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight figcaption {
-  text-align: center;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight section {
-  padding: 1em;
-  max-width: 44em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5em;
-  margin-top: 5em;
-  position: relative;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight section img {
-  position: absolute;
-  z-index: -1;
-  width: 44%;
-  right: 0;
-  top: 6em;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight section h2 {
-  color: #ffff;
-  text-align: center;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight section p {
-  margin: 0;
-  padding: 1em 0;
-  width: 50%;
-}
-/* Button */
-div[data-gadget-url$="gadget_10000arbres_style.html"] main a[role="button"],
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer a[role="button"] {
-  position: relative;
-  border: none;
-  background: transparent;
-  padding: 0;
-  cursor: pointer;
-  outline-offset: 4px;
-  transition: filter 250ms;
-  display:inline-block;
-  text-decoration: none;
-  left: 3em;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer a[role="button"] {
-  left: 0;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] main a[role="button"] .shadow,
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer a[role="button"] .shadow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  background: hsl(0deg 0% 0% / 0.25);
-  will-change: transform;
-  transform: translateY(2px);
-  transition:
-    transform
-    600ms
-    cubic-bezier(.3, .7, .4, 1);
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] main a[role="button"] .edge,
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer a[role="button"] .edge {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  background: linear-gradient(
-    to left,
-    hsl(340deg 100% 16%) 0%,
-    hsl(340deg 100% 32%) 8%,
-    hsl(340deg 100% 32%) 92%,
-    hsl(340deg 100% 16%) 100%
-  );
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] main a[role="button"] .front,
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer a[role="button"] .front{
-  display: block;
-  position: relative;
-  padding: 12px 42px;
-  border-radius: 12px;
-  font-size: 1.25rem;
-  color: white;
-  background: hsl(345deg 100% 47%);
-  will-change: transform;
-  transform: translateY(-4px);
-  transition:
-    transform
-    600ms
-    cubic-bezier(.3, .7, .4, 1);
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] main a[role="button"]:hover,
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer a[role="button"]:hover{
-  filter: brightness(110%);
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] main a[role="button"]:hover .front,
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer a[role="button"]:hover .front{
-  transform: translateY(-6px);
-  transition:
-    transform
-    250ms
-    cubic-bezier(.3, .7, .4, 1.5);
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] main a[role="button"]:active .front,
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer a[role="button"]:active .front{
-  transform: translateY(-2px);
-  transition: transform 34ms;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] main a[role="button"]:hover .shadow,
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer a[role="button"]:hover .shadow{
-  transform: translateY(4px);
-  transition:
-    transform
-    250ms
-    cubic-bezier(.3, .7, .4, 1.5);
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] main a[role="button"]:active .shadow,
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer a[role="button"]:active .shadow{
-  transform: translateY(1px);
-  transition: transform 34ms;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] main a[role="button"]:focus:not(:focus-visible),
-div[data-gadget-url$="gadget_10000arbres_style.html"] footer a[role="button"]:focus:not(:focus-visible){
-  outline: none;
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] ul li h3 ~ figure {
-  width: 25%;
-  margin: 0 auto;
-  border: 5px solid #fff;
-  border-radius: 5em;
-  background: rgba(255,255,255,.5);
-}
-div[data-gadget-url$="gadget_10000arbres_style.html"] ul li h3 ~ svg {
-  padding: 2em 0;
-}
-@media only screen and (max-width: 44em) {
-  div[data-gadget-url$="gadget_10000arbres_style.html"] main a[role="button"],
-  div[data-gadget-url$="gadget_10000arbres_style.html"] footer a[role="button"]{
-    left: 0;
-  }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] ul li h3 ~ figure {
-    width: 40%;
-    border-radius: 6em;
-  }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] ul li h3 ~ svg {
-    padding: 2em 0;
-  }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight h1 {
-    margin-top: 0.5em;
-    font-size: 3em;
-  }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight h1 + h2 {
-    font-size: 1.5em;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -0.5em;
-  }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight figure img {
-    width: 82%;
-  }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight p {
-    margin: 16px 0;
-  }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight section {
-    text-align: center;
-  }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight section p {
-    margin: 0;
-    padding: 0;
-    width: auto;
-  }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] .sec-layout-highlight section img {
-    position: static;
-  }
-  div[data-gadget-url$="gadget_10000arbres_style.html"] main a[role="button"] {
-    top: 1.5em;
-  }
-}
 
-@media only screen and (max-width: 44em) {
-  div[data-gadget-url$="gadget_10000arbres_style.html"] main section section div {
-    display: block;
-    width: 100%;
-  }
-}
+
+

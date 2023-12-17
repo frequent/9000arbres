@@ -169,7 +169,7 @@
           page_title: parsed_content.page_title || "",
           portal_status_message: parsed_content.portal_status_message || "",
           html_content: html_content || "",
-          footer_html_content: JSON.stringify(parsed_content.footer_html_content || ""),
+          //footer_html_content: JSON.stringify(parsed_content.footer_html_content || ""),
           social_media_list : JSON.stringify(parsed_content.social_media_list || ""),
           render_count: this.state.render_count + 1,
           base_url: parsed_content.sitemap.href,
@@ -240,6 +240,7 @@
           gadget.element.querySelector(SCM_ITEM_LIST)
         );
       }
+      /*
       if (modification_dict.hasOwnProperty('footer_html_content')) {
         domsugar(gadget.element.querySelector('footer'), [
           domsugar("section", {
@@ -248,6 +249,7 @@
           })
         ]);
       }
+      */
       if ((modification_dict.hasOwnProperty('form_html_content')) ||
           (modification_dict.hasOwnProperty('html_content'))) {
         if (gadget.state.form_html_content) {
