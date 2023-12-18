@@ -209,6 +209,10 @@ div[data-gadget-url$="gadget_10000arbres_style.html"] figure {
 }
 
 /** ******************* Content Layout ******************* **/
+div[data-gadget-url$="gadget_10000arbres_style.html"] .image-wrapper {
+  position: absolute;
+  top: 0;
+}
 div[data-gadget-url$="gadget_10000arbres_style.html"] #socialmedia {
   text-align: center;
   margin-top: -5em;
@@ -401,7 +405,21 @@ div[data-gadget-url$="gadget_10000arbres_style.html"] main footer ul + p a {
     text-align: center;
   }
 }
-
-
+/** ******************* Single container Style ******************* **/
+div[data-gadget-url$="gadget_10000arbres_style.html"] .single-page-container {
+  margin: 10em 20% 0;
+}
+div[data-gadget-url$="gadget_10000arbres_style.html"] .single-page-container h1,
+div[data-gadget-url$="gadget_10000arbres_style.html"] .single-page-container h2, 
+div[data-gadget-url$="gadget_10000arbres_style.html"] .single-page-container h3,
+div[data-gadget-url$="gadget_10000arbres_style.html"] .single-page-container p,
+div[data-gadget-url$="gadget_10000arbres_style.html"] .single-page-container a {
+    color: #ffffff;
+}
+@media only screen and (max-width: 44em) {
+  div[data-gadget-url$="gadget_10000arbres_style.html"] .single-page-container {
+   margin: 10em 5% 0; 
+  }
+}
 
 
