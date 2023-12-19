@@ -254,7 +254,7 @@
           (modification_dict.hasOwnProperty('html_content'))) {
         if (gadget.state.form_html_content) {
           // In case of form, display it directly
-          domsugar(gadget.element.querySelector('main'), [
+          domsugar(gadget.element.querySelector('main .content-banner'), [
             domsugar('div', {'class': 'form_container',
                              html: gadget.state.form_html_content
                             }),
