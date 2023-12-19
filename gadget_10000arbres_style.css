@@ -264,10 +264,12 @@ div[data-gadget-url$="gadget_10000arbres_style.html"] #socialmedia ul li svg:hov
 @media screen and (max-width:44em) {
   div[data-gadget-url$="gadget_10000arbres_style.html"] .image-wrapper {
     width: 100%;
-    top: -2em;
+    top: -6em;
+    pointer-events: none;
   }
   div[data-gadget-url$="gadget_10000arbres_style.html"] .image-wrapper svg {
     width: 80%;
+    pointer-events: none;
   }
   div[data-gadget-url$="gadget_10000arbres_style.html"] #socialmedia {
     margin-top: 1em;
